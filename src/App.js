@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import styled from "styled-components";
+import Form from './Components/Form'
+
+const Wrapper = styled.section`
+text-align:center;
+  padding:2rem;
+  margin:5rem;
+  background-color:#ebe5e5;
+`;
+
+const H1 = styled.h1`
+  color: black;
+  font-size: ${props => props.primary ? "40px" : "15px"};
+`;
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Wrapper>
+        <H1 primary>Sign Up</H1>
+        <Form/>
+      </Wrapper>
     </div>
   );
 }
